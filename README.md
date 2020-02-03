@@ -13,3 +13,7 @@ most simple way of running the container
 advanced usage
 
     docker run -d --name wazuh -v /:/rootfs -v /var/ossec:/var/ossec noenv/wazuh-agent -c /var/ossec/etc/ossec.conf
+
+#### Source
+
+https://github.com/noenv/docker-wazuh-agent
