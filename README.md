@@ -12,7 +12,10 @@ most simple way of running the container
 
 advanced usage
 
-    docker run -d --name wazuh -v /:/rootfs -v /var/ossec:/var/ossec noenv/wazuh-agent -c /var/ossec/etc/ossec.conf
+    docker run -d --name wazuh -v /:/rootfs:ro -v /etc/os-release:/etc/os-release \
+      -v /var/ossec/etc/ossec.conf:/var/ossec/etc/ossec.conf \
+      -v /var/ossec/etc/shared:/var/ossec/etc/shared \
+      -v /var/ossec/etc/client.keys:/var/ossec/etc/client.keys noenv/wazuh-agent
 
 #### Source
 
