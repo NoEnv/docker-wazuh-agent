@@ -14,4 +14,6 @@ RUN apt-get update && apt-get install -y \
 
 VOLUME /var/ossec
 
+COPY entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
