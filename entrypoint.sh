@@ -11,7 +11,7 @@ fi
 echo "background jobs running, listening for changes"
 
 while sleep 60; do
-  /var/ossec/bin/ossec-control status
+  /var/ossec/bin/ossec-control status > /dev/null 2>&1
   status=$?
   if [ $status -ne 0 ]; then
     echo "looks like the agent died."
