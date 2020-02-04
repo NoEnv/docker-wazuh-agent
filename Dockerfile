@@ -5,7 +5,7 @@ LABEL version "3.11.3"
 LABEL description "Wazuh Agent"
 
 RUN apt-get update && apt-get install -y \
-  curl apt-transport-https gnupg2 && \
+  procps curl apt-transport-https gnupg2 python-docker && \
   curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add - && \
   echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/sources.list.d/wazuh.list && \
   apt-get update && \
@@ -14,5 +14,4 @@ RUN apt-get update && apt-get install -y \
 
 VOLUME /var/ossec
 
-ENTRYPOINT ["/var/ossec/bin/ossec-agentd", "-f"]
-CMD ["-c", "/var/ossec/etc/ossec.conf"]
+ENTRYPOINT ["/entrypoint.sh"]
