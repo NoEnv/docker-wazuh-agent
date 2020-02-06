@@ -15,7 +15,7 @@ advanced usage
     docker run -d --name wazuh -v /:/rootfs:ro --net host --hostname ${HOSTNAME} \
       -v /etc/os-release:/etc/os-release \
       -v /var/ossec/ossec.conf:/var/ossec/etc/ossec.conf \
-      -v /var/ossec/internal_options.conf:/var/ossec/etc/internal_options.conf \
+      -v /var/ossec/local_internal_options.conf:/var/ossec/etc/local_internal_options.conf \
       -v /var/ossec/client.keys:/var/ossec/etc/client.keys noenv/wazuh-agent
 
 #### Source
