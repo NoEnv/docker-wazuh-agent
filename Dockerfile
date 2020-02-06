@@ -4,10 +4,6 @@ LABEL maintainer "NoEnv"
 LABEL version "3.11.3"
 LABEL description "Wazuh Agent"
 
-ENV JOIN_MANAGER
-ENV JOIN_GROUPS
-ENV JOIN_PASSWORD
-
 RUN apt-get update && apt-get install -y \
   procps curl apt-transport-https gnupg2 python-docker && \
   curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add - && \

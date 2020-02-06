@@ -13,6 +13,7 @@ most simple way of running the container
 advanced usage
 
     docker run -d --name wazuh -v /:/rootfs:ro --net host --hostname ${HOSTNAME} \
+      -e JOIN_MANAGER=172.17.0.1 -e JOIN_GROUP=default,test -e JOIN_PASSWORD=test123 \
       -v /etc/os-release:/etc/os-release \
       -v /var/ossec/ossec.conf:/var/ossec/etc/ossec.conf \
       -v /var/ossec/local_internal_options.conf:/var/ossec/etc/local_internal_options.conf \
