@@ -4,7 +4,7 @@
 if [ ! -s /var/ossec/etc/client.keys ]; then
   groups=${JOIN_GROUPS:-default}
   password=""
-  if [[ ! -z "${JOIN_PASSWORD}" ]]; then
+  if [ ! -z ${JOIN_PASSWORD} ]; then
     password="-P ${JOIN_PASSWORD}"
   fi
   manager=${JOIN_MANAGER:-172.17.0.1}
