@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
   apt-get install -y wazuh-agent=3.11.3-1 && \
   rm -rf /var/lib/apt/lists/*
 
-VOLUME /var/ossec
+VOLUME /var/ossec/etc
 
 COPY entrypoint.sh /entrypoint.sh
 
