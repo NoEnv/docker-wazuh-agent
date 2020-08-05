@@ -5,7 +5,7 @@ LABEL version "3.13.1"
 LABEL description "Wazuh Agent"
 
 RUN apt-get update && apt-get install -y \
-  procps curl apt-transport-https gnupg2 python-docker && \
+  procps curl apt-transport-https gnupg2 inotify-tools python-docker && \
   curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add - && \
   echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/sources.list.d/wazuh.list && \
   apt-get update && \
