@@ -1,3 +1,5 @@
+[![Docker Pulls](https://badgen.net/docker/pulls/noenv/wazuh-agent)](https://hub.docker.com/r/noenv/wazuh-agent)
+
 ## docker-wazuh-agent
 
 #### Description
