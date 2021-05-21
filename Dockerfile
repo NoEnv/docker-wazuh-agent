@@ -11,6 +11,6 @@ RUN mv /wazuh.repo /etc/yum.repos.d/wazuh.repo && \
   dnf -y install procps-ng inotify-tools python-docker wazuh-agent && \
   mv /ossec.conf /var/ossec/etc/ && \
   dnf clean all && \
-  rm -rf /var/lib/dnf/repos/* /tmp/* /var/tmp/*
+  rm -rf /var/lib/dnf/repos/* /tmp/* /var/tmp/* /var/log/*.log
 
 ENTRYPOINT ["/entrypoint.sh"]
