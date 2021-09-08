@@ -1,4 +1,6 @@
 [![Docker Pulls](https://badgen.net/docker/pulls/noenv/wazuh-agent)](https://hub.docker.com/r/noenv/wazuh-agent)
+[![Quay.io Enabled](https://badgen.net/badge/quay%20pulls/enabled/green)](https://quay.io/repository/noenv/wazuh-agent)
+[![build](https://github.com/NoEnv/docker-wazuh-agent/actions/workflows/build.yml/badge.svg)](https://github.com/NoEnv/docker-wazuh-agent/actions/workflows/build.yml)
 
 ## docker-wazuh-agent
 
